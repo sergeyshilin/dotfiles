@@ -2,9 +2,12 @@
 dnf install -y
 	sway \
 	waybar \
+	brightnessctl \
 	git \
 	zsh \
-	neovim
+	neovim \
+	vifm \
+	htop
 
 # Pre-installation steps
 TEMP_BOOTSTRAP_FOLDER = $HOME/temp-bootstrap

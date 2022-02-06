@@ -87,11 +87,13 @@ plugins=(
 	dnf
 	docker
 	git
+	history
 	last-working-dir
 	pip
 	pyenv
 	sudo
 	urltools
+	web-search
 	z
 	zsh-autosuggestions
 )
