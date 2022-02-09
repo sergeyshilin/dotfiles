@@ -2,11 +2,13 @@
 dnf install -y
 	sway \
 	waybar \
+	wtype \
 	brightnessctl \
 	git \
 	zsh \
 	neovim \
 	vifm \
+	stow \
 	htop
 
 # Pre-installation steps
@@ -36,6 +38,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # 1. Zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# Copy sway backgroung
+mkdir -p $HOME/Pictures/backgrounds
+cp -p images/framework-bg-3x2.jpeg $HOME/Pictures/backgrounds/
+
+# Run stow to create symlinks for all configs
 
 # Cleanup
 rm -rf $TEMP_BOOTSTRAP_FOLDER
