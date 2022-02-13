@@ -2,6 +2,10 @@
 dnf install -y
 	sway \
 	waybar \
+	playerctl \
+	pavucontrol \
+	fontawesome-fonts \
+	fontawesome-fonts-web \
 	wtype \
 	brightnessctl \
 	git \
@@ -9,7 +13,9 @@ dnf install -y
 	neovim \
 	vifm \
 	stow \
-	htop
+	htop \
+	unzip \
+	network-manager-applet
 
 # Pre-installation steps
 TEMP_BOOTSTRAP_FOLDER = $HOME/temp-bootstrap
@@ -41,6 +47,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.
 # Copy sway backgroung
 mkdir -p $HOME/Pictures/backgrounds
 cp -p images/framework-bg-3x2.jpeg $HOME/Pictures/backgrounds/
+
+# Configure neovim: install vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Run stow to create symlinks for all configs
 

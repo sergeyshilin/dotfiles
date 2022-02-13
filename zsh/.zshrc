@@ -131,7 +131,13 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
+alias dfn="dnf"
 alias vim="nvim"
+alias vpn="protonvpn-cli"
+
+# Exports
+export XDG_SESSION_TYPE="wayland"
+export XDG_CURRENT_DESKTOP="Unity"
 
 # Enable automatic alias suggestions
 ZSH_ALIAS_FINDER_AUTOMATIC=true
