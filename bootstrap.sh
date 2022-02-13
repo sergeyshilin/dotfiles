@@ -4,18 +4,18 @@ dnf install -y
 	waybar \
 	playerctl \
 	pavucontrol \
+	blueman \
 	fontawesome-fonts \
 	fontawesome-fonts-web \
-	wtype \
 	brightnessctl \
+	network-manager-applet \
+	wtype \
 	git \
 	zsh \
 	neovim \
 	vifm \
 	stow \
-	htop \
-	unzip \
-	network-manager-applet
+	htop
 
 # Pre-installation steps
 TEMP_BOOTSTRAP_FOLDER = $HOME/temp-bootstrap

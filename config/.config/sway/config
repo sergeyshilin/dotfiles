@@ -52,6 +52,9 @@ bindsym $mod+Shift+l exec swaylock -f -c 000000
 # Keep network manager applet running -- needed for ProtonVPN
 exec_always nm-applet --indicator
 
+# Enable bluetooth indicator
+exec_always blueman-applet
+
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -179,10 +182,10 @@ exec_always nm-applet --indicator
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+j floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+j focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
