@@ -49,8 +49,8 @@
     "battery": {
         "states": {
             // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 15,
+            "critical": 10
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
@@ -90,7 +90,7 @@
     "custom/spotify": {
         "format": " {}",
         "max-length": 40,
-        "interval": 30, // Remove this if your script is endless and write in loop
+        "interval": 10, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
         "exec-if": "pgrep spotify"
     }
