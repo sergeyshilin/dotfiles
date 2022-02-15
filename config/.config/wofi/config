@@ -1,0 +1,6 @@
+allow-images=true
+allow-markup=true
+filter_rate=200
+insensitive=true
+show=run
+width=750
