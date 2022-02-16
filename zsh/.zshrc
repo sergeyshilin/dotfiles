@@ -141,3 +141,7 @@ export XDG_CURRENT_DESKTOP="Unity"
 
 # Enable automatic alias suggestions
 ZSH_ALIAS_FINDER_AUTOMATIC=true
+
+# Enable Pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

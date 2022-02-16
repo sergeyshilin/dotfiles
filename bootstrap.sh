@@ -52,7 +52,30 @@ cp -p images/framework-bg-3x2.jpeg $HOME/Pictures/backgrounds/
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+# Configure Pyenv
+# 1. Install pyenv dependencies
+dnf install \
+	make \
+	gcc \
+	zlib-devel \
+	bzip2 \
+	bzip2-devel \
+	readline-devel \
+	sqlite \
+	sqlite-devel \
+	openssl-devel \
+	tk-devel \
+	libffi-devel \
+	xz-devel
+
+# 2. Install pyenv
+curl https://pyenv.run | bash
+
 # Run stow to create symlinks for all configs
+stow config
+stow git
+stow zsh
+stow bash
 
 # Cleanup
 rm -rf $TEMP_BOOTSTRAP_FOLDER
