@@ -38,6 +38,9 @@ output eDP-1 scale 1.7
 
 # Windows border settings
 default_border pixel
+gaps inner 5
+smart_gaps off
+smart_borders off
 
 ### Idle configuration
 #
