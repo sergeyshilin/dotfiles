@@ -48,7 +48,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.
 
 # Copy sway background
 mkdir -p $HOME/Pictures/backgrounds
-cp -p images/landscape-bg.jpg $HOME/Pictures/backgrounds/
+cp -p images/background.jpg $HOME/Pictures/backgrounds/
 
 # Configure neovim: install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
