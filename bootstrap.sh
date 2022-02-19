@@ -1,5 +1,5 @@
 # Install dependencies:
-dnf install -y
+sudo dnf install -y
 	sway \
 	waybar \
 	playerctl \
@@ -16,6 +16,8 @@ dnf install -y
 	vifm \
 	stow \
 	htop
+
+sudo ln -s $(which nvim) /usr/local/bin/vim
 
 # Pre-installation steps
 TEMP_BOOTSTRAP_FOLDER = $HOME/temp-bootstrap
@@ -44,13 +46,18 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # 1. Zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# Copy sway backgroung
+# Copy sway background
 mkdir -p $HOME/Pictures/backgrounds
-cp -p images/framework-bg-3x2.jpeg $HOME/Pictures/backgrounds/
+cp -p images/landscape-bg.jpg $HOME/Pictures/backgrounds/
 
 # Configure neovim: install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+sudo dnf install -y \
+	nodejs
+sudo npm install -g yarn
+sudo npm install -g tree-sitter-cli
 
 # Configure Pyenv
 # 1. Install pyenv dependencies

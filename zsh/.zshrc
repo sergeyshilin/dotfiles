@@ -72,6 +72,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Disable Pyenv warnings before we start using the plugin
+ZSH_PYENV_QUIET=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -132,16 +135,17 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias dfn="dnf"
-alias vim="nvim"
 alias vpn="protonvpn-cli"
 
 # Exports
 export XDG_SESSION_TYPE="wayland"
 export XDG_CURRENT_DESKTOP="Unity"
 
+# Source private exports (tokens and credentials)
+source ~/.zprofile-private
+
 # Enable automatic alias suggestions
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # Enable Pyenv
-eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

@@ -26,7 +26,7 @@ set $menu wofi --show run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Pictures/backgrounds/framework-bg-3x2.jpeg fill
+output * bg $HOME/Pictures/backgrounds/landscape-bg.jpg fill
 
 output eDP-1 scale 1.7
 #
