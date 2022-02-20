@@ -8,6 +8,11 @@ set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 
+" Set python provider
+let g:python3_host_prog = '~/.pyenv/versions/neovim/bin/python3'
+let g:loaded_python_provider = 0 " disable python2 support
+
+
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -21,11 +26,14 @@ call plug#begin()
 
 Plug 'sainnhe/sonokai' " monokai-inspired theme
 Plug 'vim-airline/vim-airline' " status bar and other fancy stuff
-Plug 'jmcantrell/vim-virtualenv' " display virtualenv in the airline
+Plug 'ryanoasis/vim-devicons' " icons
 Plug 'vifm/vifm.vim' " file manager
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder and grep
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' " Git basics with :Git and more
+Plug 'justinmk/vim-sneak' " Multi-line navigation
 
 " Initialize plugin system
 call plug#end()
@@ -41,12 +49,9 @@ let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
 
-" Help vim detect python virtual environment
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+" Airline settings
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" Sneak settings
+let g:sneak#label = 1

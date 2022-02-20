@@ -1,21 +1,21 @@
 # Install dependencies:
 sudo dnf install -y
-	sway \
-	waybar \
-	playerctl \
-	pavucontrol \
-	blueman \
-	fontawesome-fonts \
-	fontawesome-fonts-web \
-	brightnessctl \
-	network-manager-applet \
-	wtype \
-	git \
-	zsh \
-	neovim \
-	vifm \
-	stow \
-	htop
+    sway \
+    waybar \
+    playerctl \
+    pavucontrol \
+    blueman \
+    fontawesome-fonts \
+    fontawesome-fonts-web \
+    brightnessctl \
+    network-manager-applet \
+    wtype \
+    git \
+    zsh \
+    neovim \
+    vifm \
+    stow \
+    htop
 
 sudo ln -s $(which nvim) /usr/local/bin/vim
 
@@ -50,33 +50,46 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.
 mkdir -p $HOME/Pictures/backgrounds
 cp -p images/background.jpg $HOME/Pictures/backgrounds/
 
+# Configure Pyenv
+# 1. Install pyenv dependencies
+dnf install \
+    make \
+    gcc \
+    zlib-devel \
+    bzip2 \
+    bzip2-devel \
+    readline-devel \
+    sqlite \
+    sqlite-devel \
+    openssl-devel \
+    tk-devel \
+    libffi-devel \
+    xz-devel
+
+# 2. Install pyenv
+curl https://pyenv.run | bash
+
 # Configure neovim: install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 sudo dnf install -y \
-	nodejs
+    nodejs \
+    fzf \
+    ripgrep \
+    fd-find
+
 sudo npm install -g yarn
 sudo npm install -g tree-sitter-cli
 
-# Configure Pyenv
-# 1. Install pyenv dependencies
-dnf install \
-	make \
-	gcc \
-	zlib-devel \
-	bzip2 \
-	bzip2-devel \
-	readline-devel \
-	sqlite \
-	sqlite-devel \
-	openssl-devel \
-	tk-devel \
-	libffi-devel \
-	xz-devel
-
-# 2. Install pyenv
-curl https://pyenv.run | bash
+# Neovim: install python environment
+pyenv install 3.10.2
+pyenv virtualenv 3.10.2 neovim
+pyenv activate neovim
+pip install pynvim flake8 black
+sudo ln -s `which pyenv flake8` /usr/local/bin/flake8
+sudo ln -s `which pyenv black` /usr/local/bin/black
+pyenv deactivate
 
 # Run stow to create symlinks for all configs
 stow config
