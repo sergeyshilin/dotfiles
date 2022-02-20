@@ -81,6 +81,7 @@ sudo dnf install -y \
 
 sudo npm install -g yarn
 sudo npm install -g tree-sitter-cli
+sudo npm install -g pyright
 
 # Neovim: install python environment
 pyenv install 3.10.2
