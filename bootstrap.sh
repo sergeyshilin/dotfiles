@@ -64,10 +64,14 @@ dnf install \
     openssl-devel \
     tk-devel \
     libffi-devel \
-    xz-devel
+    xz-devel \
+    perl-JSON-PP
 
 # 2. Install pyenv
 curl https://pyenv.run | bash
+
+# 3. Install pyenv-pyright for a neovim support
+git clone https://github.com/alefpereira/pyenv-pyright.git $(pyenv root)/plugins/pyenv-pyright
 
 # Configure neovim: install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -82,6 +86,9 @@ sudo dnf install -y \
 sudo npm install -g yarn
 sudo npm install -g tree-sitter-cli
 sudo npm install -g pyright
+sudo npm install -g bash-language-server
+sudo npm install -g vim-language-server
+sudo npm install -g typescript typescript-language-server
 
 # Neovim: install python environment
 pyenv install 3.10.2
@@ -91,6 +98,12 @@ pip install pynvim flake8 black
 sudo ln -s `which pyenv flake8` /usr/local/bin/flake8
 sudo ln -s `which pyenv black` /usr/local/bin/black
 pyenv deactivate
+
+# Neovim: install lua environment
+curl -Lo $TEMP_BOOTSTRAP_FOLDER/lua-server.tar.gz https://github.com/sumneko/lua-language-server/releases/download/2.6.6/lua-language-server-2.6.6-linux-x64.tar.gz
+mkdir -p $HOME/thirdparty/lua
+tar -xzf $TEMP_BOOTSTRAP_FOLDER/lua-language-server.tar.gz -C $HOME/thirdparty/lua
+
 
 # Run stow to create symlinks for all configs
 stow config

@@ -46,6 +46,9 @@ Plug 'hrsh7th/cmp-cmdline' " Cmp for vim's cmdline
 Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
 Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
 Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+Plug 'onsails/lspkind-nvim' " Icons in autocompletion popus
+Plug 'windwp/nvim-autopairs' " Autocomplete brackets and arguments
+Plug 'ray-x/lsp_signature.nvim' " Function arguments hints
 
 " Other plugins
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
