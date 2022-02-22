@@ -83,12 +83,15 @@ sudo dnf install -y \
     ripgrep \
     fd-find
 
-sudo npm install -g yarn
-sudo npm install -g tree-sitter-cli
-sudo npm install -g pyright
-sudo npm install -g bash-language-server
-sudo npm install -g vim-language-server
-sudo npm install -g typescript typescript-language-server
+sudo npm install -g \
+    yarn \
+    tree-sitter-cli \
+    pyright \
+    bash-language-server \
+    vim-language-server \
+    diagnostic-languageserver \
+    typescript \
+    typescript-language-server
 
 # Neovim: install python environment
 pyenv install 3.10.2

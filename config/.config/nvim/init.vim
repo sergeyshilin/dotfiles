@@ -35,6 +35,7 @@ Plug 'tpope/vim-fugitive' " Git basics with :Git and more
 Plug 'justinmk/vim-sneak' " Multi-line navigation
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder and grep
 
 " LSP
@@ -49,6 +50,10 @@ Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 Plug 'onsails/lspkind-nvim' " Icons in autocompletion popus
 Plug 'windwp/nvim-autopairs' " Autocomplete brackets and arguments
 Plug 'ray-x/lsp_signature.nvim' " Function arguments hints
+
+" Coding
+Plug 'mhartington/formatter.nvim'
+Plug 'numToStr/Comment.nvim'
 
 " Other plugins
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
