@@ -28,8 +28,8 @@ call plug#begin()
 Plug 'sainnhe/sonokai' " monokai-inspired theme
 
 " Environment
-Plug 'vim-airline/vim-airline' " status bar and other fancy stuff
-Plug 'ryanoasis/vim-devicons' " icons
+Plug 'nvim-lualine/lualine.nvim' " status bar
+Plug 'kyazdani42/nvim-web-devicons' " icons in the status bar
 Plug 'vifm/vifm.vim' " file manager
 Plug 'tpope/vim-fugitive' " Git basics with :Git and more
 Plug 'justinmk/vim-sneak' " Multi-line navigation
@@ -52,8 +52,10 @@ Plug 'windwp/nvim-autopairs' " Autocomplete brackets and arguments
 Plug 'ray-x/lsp_signature.nvim' " Function arguments hints
 
 " Coding
-Plug 'mhartington/formatter.nvim'
-Plug 'numToStr/Comment.nvim'
+Plug 'mhartington/formatter.nvim' " Easy code formatting
+Plug 'numToStr/Comment.nvim' " Toggle comment/uncomment
+Plug 'mfussenegger/nvim-dap' " Debugging
+Plug 'mfussenegger/nvim-dap-python' " Debugging - python adapter
 
 " Other plugins
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -71,7 +73,7 @@ let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
 
 " Airline settings
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Sneak settings

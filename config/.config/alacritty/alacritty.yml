@@ -8,6 +8,6 @@ font:
   bold_italic:
     family: "MesloLGS NF"
 
-  size: 11
+  size: 10
 
-background_opacity: 0.9
+background_opacity: 0.95

@@ -97,7 +97,7 @@ sudo npm install -g \
 pyenv install 3.10.2
 pyenv virtualenv 3.10.2 neovim
 pyenv activate neovim
-pip install pynvim flake8 black
+pip install pynvim flake8 black debugpy
 sudo ln -s `which pyenv flake8` /usr/local/bin/flake8
 sudo ln -s `which pyenv black` /usr/local/bin/black
 pyenv deactivate
