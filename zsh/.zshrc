@@ -94,6 +94,7 @@ plugins=(
 	last-working-dir
 	pip
 	pyenv
+    rust
 	sudo
 	urltools
 	web-search
@@ -133,18 +134,17 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH=$HOME/thirdparty/lua/bin:$PATH
-
 # Aliases
 alias dfn="dnf"
 alias vpn="protonvpn-cli"
 
-# Exports
+# Custom exports
 export XDG_SESSION_TYPE="wayland"
-export XDG_CURRENT_DESKTOP="Unity"
+export PATH="$HOME/thirdparty/lua/bin:$PATH"
 
-# Source private exports (tokens and credentials)
+# Source other exports, tokens and credentials
 source ~/.zprofile-private
+source ~/.cargo/env
 
 # Enable automatic alias suggestions
 ZSH_ALIAS_FINDER_AUTOMATIC=true
