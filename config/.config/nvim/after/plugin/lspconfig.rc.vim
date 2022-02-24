@@ -65,6 +65,12 @@ nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 }
 
+-- Svelte language server settings
+nvim_lsp.svelte.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
 -- Vim language server settings
 nvim_lsp.vimls.setup {
   capabilities = capabilities,

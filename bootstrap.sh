@@ -89,11 +89,15 @@ sudo npm install -g \
     yarn \
     tree-sitter-cli \
     pyright \
+    typescript \
     bash-language-server \
     vim-language-server \
     diagnostic-languageserver \
-    typescript \
-    typescript-language-server
+    typescript-language-server \
+    svelte-language-server \
+    prettier \
+    prettier-plugin-svelte \
+    eslint
 
 # Neovim: install python environment
 pyenv install 3.10.2
