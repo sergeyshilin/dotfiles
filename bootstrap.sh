@@ -97,6 +97,7 @@ sudo npm install -g \
     svelte-language-server \
     prettier \
     prettier-plugin-svelte \
+    prettier-plugin-tailwindcss \
     eslint
 
 # Neovim: install python environment
