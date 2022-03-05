@@ -85,7 +85,7 @@ plugins=(
 	colored-man-pages
 	common-aliases
 	copybuffer
-	copydir
+    copypath
 	copyfile
 	dnf
 	docker

@@ -43,6 +43,6 @@ vim.api.nvim_set_keymap('n', '<space>f', '<cmd>:Format<CR>', opts)
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.py,*.json,*.js,*.ts,*.tsx,*.svelte FormatWrite
+  autocmd BufWritePost *.py,*.json,*.js,*.cjs,*.ts,*.tsx,*.svelte FormatWrite
 augroup END
 ]], true)

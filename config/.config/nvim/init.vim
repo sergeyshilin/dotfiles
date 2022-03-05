@@ -73,9 +73,5 @@ let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
 
-" Airline settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
 " Sneak settings
 let g:sneak#label = 1
