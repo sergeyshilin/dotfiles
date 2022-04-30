@@ -141,7 +141,7 @@ alias vpn="protonvpn-cli"
 # Custom exports
 export EDITOR="nvim"
 export XDG_SESSION_TYPE="wayland"
-export PATH="$HOME/thirdparty/lua/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/thirdparty/lua/bin:$PATH"
 
 # Source other exports, tokens and credentials
 source ~/.zprofile-private
