@@ -22,3 +22,12 @@ zsh:
 git:
 	$(info Setting up Git)
 	stow config-git
+
+base-configs:
+	$(info Setting up base configuration files)
+	stow config-base
+
+sway:
+	$(info Setting up Sway environment)
+	@ ./bin/sway.sh
+	stow config-sway
