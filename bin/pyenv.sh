@@ -1,6 +1,6 @@
 # Configure Pyenv
 # 1. Install pyenv dependencies
-sudo dnf install \
+sudo dnf install -y \
     make \
     gcc \
     zlib-devel \
@@ -16,5 +16,7 @@ sudo dnf install \
     perl-JSON-PP
 
 # 2. Install pyenv
-curl https://pyenv.run | bash
+if [ ! -d ~/.pyenv ]; then
+    curl https://pyenv.run | bash
+fi
 

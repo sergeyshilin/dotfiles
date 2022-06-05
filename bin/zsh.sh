@@ -4,7 +4,7 @@
 TEMP_BOOTSTRAP_FOLDER=$HOME/.tmp/zsh
 mkdir -p $TEMP_BOOTSTRAP_FOLDER
 
-sudo dnf install zsh
+sudo dnf install -y zsh
 
 # Make zsh main shell
 chsh -s $(which zsh)
