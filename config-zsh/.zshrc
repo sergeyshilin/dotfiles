@@ -82,6 +82,7 @@ ZSH_PYENV_QUIET=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	alias-finder
+    aws
 	colored-man-pages
 	common-aliases
 	copybuffer
