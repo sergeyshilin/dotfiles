@@ -7,4 +7,5 @@ sudo dnf install -y util-linux-user \
 	git \
 	stow \
 	htop \
-	alacritty
+	alacritty \
+    vifm
