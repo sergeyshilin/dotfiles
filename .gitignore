@@ -1,3 +1,4 @@
+config-zsh/.zprofile-private
 **/pijul/identities
 **/pijul/publickey.json
 **/pijul/secretkey.json

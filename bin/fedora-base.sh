@@ -8,4 +8,5 @@ sudo dnf install -y util-linux-user \
 	stow \
 	htop \
 	alacritty \
+    imv \
     vifm

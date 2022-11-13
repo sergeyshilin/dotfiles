@@ -1,3 +1,5 @@
 [user]
 	name = Sergei Shilin
 	email = code@shilin.ca
+[init]
+	defaultBranch = main
