@@ -41,3 +41,5 @@ fi
 
 # Cleanup
 rm -rf $TEMP_BOOTSTRAP_FOLDER
+
+touch ~/.zprofile-private
