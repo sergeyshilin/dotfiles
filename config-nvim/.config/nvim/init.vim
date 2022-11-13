@@ -62,6 +62,9 @@ Plug 'mfussenegger/nvim-dap-python' " Debugging - python adapter
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 
+" Enable yanked highlighting
+lua require('highlight-yanked')
+
 " Important!!
 if has('termguicolors')
   set termguicolors
