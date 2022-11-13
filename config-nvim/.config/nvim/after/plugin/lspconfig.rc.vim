@@ -41,7 +41,7 @@ end
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = lsp_protocol.make_client_capabilities()
-capabilities = lsp_cmp.update_capabilities(capabilities)
+capabilities = lsp_cmp.default_capabilities(capabilities)
 
 -- Python language server settings
 nvim_lsp.pyright.setup {
