@@ -25,10 +25,19 @@ formatter.setup({
     javascript = {
       PrettierFormatter
     },
+    javascriptreact = {
+      PrettierFormatter
+    },
     typescript = {
       PrettierFormatter
     },
+    typescriptreact = {
+      PrettierFormatter
+    },
     json = {
+      PrettierFormatter
+    },
+    html = {
       PrettierFormatter
     },
     svelte = {
@@ -46,6 +55,6 @@ vim.api.nvim_set_keymap('n', '<space>f', '<cmd>:Format<CR>', opts)
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.py,*.json,*.js,*.cjs,*.css,*.ts,*.tsx,*.svelte FormatWrite
+  autocmd BufWritePost *.py,*.json,*.js,*.jsx,*.cjs,*.css,*.ts,*.tsx,*.svelte FormatWrite
 augroup END
 ]], true)
