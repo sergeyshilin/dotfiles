@@ -4,11 +4,11 @@ fedora-base:
 	$(info Installing base Fedora components)
 	@ ./bin/fedora-base.sh
 
-pyenv:
-	$(info Setting up PyEnv)
-	@ ./bin/pyenv.sh
+python:
+	$(info Setting up Python environments)
+	@ ./bin/python.sh
 
-neovim: pyenv
+neovim: python
 	$(info Setting up Neovim)
 	@ ./bin/neovim.sh
 	stow config-nvim

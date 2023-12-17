@@ -20,3 +20,7 @@ if [ ! -d ~/.pyenv ]; then
     curl https://pyenv.run | bash
 fi
 
+# Configure Pipx and Poetry
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+pipx install poetry

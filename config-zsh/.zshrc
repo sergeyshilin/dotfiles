@@ -81,26 +81,27 @@ ZSH_PYENV_QUIET=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	alias-finder
+    alias-finder
     aws
-	colored-man-pages
-	common-aliases
-	copybuffer
+    colored-man-pages
+    common-aliases
+    copybuffer
     copypath
-	copyfile
-	dnf
-	docker
-	git
-	history
-	last-working-dir
-	pip
-	pyenv
+    copyfile
+    dnf
+    docker
+    git
+    history
+    last-working-dir
+    pip
+    poetry
+    pyenv
     rust
-	sudo
-	urltools
-	web-search
-	z
-	zsh-autosuggestions
+    sudo
+    urltools
+    web-search
+    z
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -156,3 +157,13 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+export FLYCTL_INSTALL="/home/truepk/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
