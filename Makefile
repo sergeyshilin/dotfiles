@@ -8,7 +8,11 @@ python:
 	$(info Setting up Python environments)
 	@ ./bin/python.sh
 
-neovim: python
+node:
+	$(info Setting up Node environment)
+	@ ./bin/node.sh
+
+neovim: python node
 	$(info Setting up Neovim)
 	@ ./bin/neovim.sh
 	stow config-nvim

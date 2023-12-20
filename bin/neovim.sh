@@ -31,21 +31,6 @@ sudo dnf install -y \
     ripgrep \
     fd-find
 
-sudo npm install -g \
-    yarn \
-    tree-sitter-cli \
-    pyright \
-    typescript \
-    bash-language-server \
-    vim-language-server \
-    diagnostic-languageserver \
-    typescript-language-server \
-    svelte-language-server \
-    prettier \
-    prettier-plugin-svelte \
-    prettier-plugin-tailwindcss \
-    eslint
-
 # Install neovim python environment
 pyenv install 3.10.2
 pyenv virtualenv 3.10.2 neovim
