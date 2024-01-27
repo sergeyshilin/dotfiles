@@ -12,6 +12,10 @@ set expandtab       " Expand TABs to spaces
 let g:python3_host_prog = '~/.pyenv/versions/neovim/bin/python3'
 let g:loaded_python_provider = 0 " disable python2 support
 
+" Fix vertical scroll by repositioning middle of the screen
+nmap <C-u> <C-u>zz
+nmap <C-d> <C-d>zz
+
 
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -53,6 +57,7 @@ Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 Plug 'onsails/lspkind-nvim' " Icons in autocompletion popus
 Plug 'windwp/nvim-autopairs' " Autocomplete brackets and arguments
 Plug 'ray-x/lsp_signature.nvim' " Function arguments hints
+Plug 'kylechui/nvim-surround' " Surround with quotes/brackets
 
 " Coding
 Plug 'mhartington/formatter.nvim' " Easy code formatting
