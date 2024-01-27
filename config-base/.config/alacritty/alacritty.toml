@@ -18,4 +18,4 @@ decorations = "Full"
 dynamic_padding = true
 dynamic_title = true
 decorations_theme_variant = "Dark"
-opacity = 0.95
+opacity = 0.9
