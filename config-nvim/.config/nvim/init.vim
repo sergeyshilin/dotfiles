@@ -38,6 +38,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder and grep
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'norcalli/nvim-colorizer.lua' " css color highlighter
 
 " LSP
 Plug 'neovim/nvim-lspconfig' " Collection of configurations for built-in LSP client
