@@ -28,6 +28,7 @@ require'nvim-treesitter.configs'.setup {
     "python",
     "rust",
     "svelte",
+    "tsx",
     "typescript",
     "toml",
     "vim",
