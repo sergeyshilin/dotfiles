@@ -1,0 +1,21 @@
+[font]
+size = 10
+
+[font.bold]
+family = "MesloLGS NF"
+
+[font.bold_italic]
+family = "MesloLGS NF"
+
+[font.italic]
+family = "MesloLGS NF"
+
+[font.normal]
+family = "MesloLGS NF"
+
+[window]
+decorations = "full"
+dynamic_padding = true
+dynamic_title = true
+gtk_theme_variant = "dark"
+opacity = 0.95
