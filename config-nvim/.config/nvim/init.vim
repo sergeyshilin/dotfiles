@@ -29,7 +29,8 @@ Plug 'sainnhe/sonokai' " monokai-inspired theme
 
 " Environment
 Plug 'nvim-lualine/lualine.nvim' " status bar
-Plug 'kyazdani42/nvim-web-devicons' " icons in the status bar
+Plug 'nvim-tree/nvim-web-devicons' " icons in the status bar
+Plug 'akinsho/bufferline.nvim' " Pretty tabs
 Plug 'vifm/vifm.vim' " file manager
 Plug 'tpope/vim-fugitive' " Git basics with :Git and more
 Plug 'justinmk/vim-sneak' " Multi-line navigation
