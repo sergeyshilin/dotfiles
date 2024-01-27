@@ -14,8 +14,8 @@ family = "MesloLGS NF"
 family = "MesloLGS NF"
 
 [window]
-decorations = "full"
+decorations = "Full"
 dynamic_padding = true
 dynamic_title = true
-gtk_theme_variant = "dark"
-opacity = 0.95
+decorations_theme_variant = "Dark"
+opacity = 0.9
