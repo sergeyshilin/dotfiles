@@ -78,3 +78,11 @@ colorscheme sonokai
 
 " Sneak settings
 let g:sneak#label = 1
+
+" Use vifm as default file viewer instead of netrw
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+let g:vifm_replace_netrw = 1
+let g:vifm_embed_term = 1
+let g:vifm_embed_split = 1
+nnoremap <silent> \v <cmd>rightbelow horizontal 30TabVifm<cr>
