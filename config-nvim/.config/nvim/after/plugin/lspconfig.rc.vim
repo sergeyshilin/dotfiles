@@ -66,7 +66,7 @@ nvim_lsp.pyright.setup {
 }
 
 -- Typescript language server settings
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
