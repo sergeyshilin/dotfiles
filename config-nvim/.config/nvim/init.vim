@@ -8,6 +8,8 @@ set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 
+set nobackup nowritebackup  " Don't create backup/swap files
+
 " Set python provider
 let g:python3_host_prog = '~/.pyenv/versions/neovim/bin/python3'
 let g:loaded_python_provider = 0 " disable python2 support
@@ -86,10 +88,7 @@ colorscheme sonokai
 " Sneak settings
 let g:sneak#label = 1
 
-" Use vifm as default file viewer instead of netrw
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-let g:vifm_replace_netrw = 1
+" Open vifm in a split instead of full screen
 let g:vifm_embed_term = 1
 let g:vifm_embed_split = 1
 nnoremap <silent> \v <cmd>rightbelow horizontal 30TabVifm<cr>
