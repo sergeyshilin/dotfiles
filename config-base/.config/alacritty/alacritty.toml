@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/github-light.toml"
+    "~/.config/alacritty/themes/custom.toml"
 ]
 [font]
 size = 10

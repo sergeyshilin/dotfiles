@@ -31,7 +31,8 @@ call plug#begin()
 " Make sure you use single quotes
 
 " Theme
-Plug 'sainnhe/sonokai' " monokai-inspired theme
+Plug 'olimorris/onedarkpro.nvim'
+Plug 'sainnhe/everforest'
 
 " Environment
 Plug 'nvim-lualine/lualine.nvim' " status bar
@@ -74,16 +75,17 @@ call plug#end()
 " Enable yanked highlighting
 lua require('highlight-yanked')
 
-" Important!!
-if has('termguicolors')
+" Important for true colors!!
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
-" The configuration options should be placed before `colorscheme sonokai`.
-let g:sonokai_style = 'default'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-colorscheme sonokai
+set background=light
+let g:everforest_background = 'hard' " Set contrast for the theme
+let g:everforest_better_performance = 1
+colorscheme everforest
 
 " Sneak settings
 let g:sneak#label = 1

@@ -23,7 +23,7 @@ white = "0x6e7781"
 yellow = "0x4d2d00"
 
 [colors.primary]
-background = "#faf4ed"
+background = "#fffbef"
 foreground = "#494659"
 dim_foreground = "#4c4769"
 bright_foreground = "#625c87"
