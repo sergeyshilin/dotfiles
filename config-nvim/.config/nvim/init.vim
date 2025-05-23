@@ -31,8 +31,7 @@ call plug#begin()
 " Make sure you use single quotes
 
 " Theme
-Plug 'olimorris/onedarkpro.nvim'
-Plug 'sainnhe/everforest'
+Plug 'scottmckendry/cyberdream.nvim'
 
 " Environment
 Plug 'nvim-lualine/lualine.nvim' " status bar
@@ -82,10 +81,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-set background=light
-let g:everforest_background = 'hard' " Set contrast for the theme
-let g:everforest_better_performance = 1
-colorscheme everforest
+colorscheme cyberdream
 
 " Sneak settings
 let g:sneak#label = 1

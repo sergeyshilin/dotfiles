@@ -3,7 +3,7 @@ if (not status) then return end
 
 lualine.setup({
     options = {
-        theme = 'everforest'
+        theme = 'auto'
     },
     sections = {
         lualine_a = {'mode'},
