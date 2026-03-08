@@ -1,4 +1,5 @@
 config-zsh/.zprofile-private
+config-zsh/.cargo
 **/pijul/identities
 **/pijul/publickey.json
 **/pijul/secretkey.json

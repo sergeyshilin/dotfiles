@@ -69,6 +69,7 @@ Plug 'mfussenegger/nvim-dap-python' " Debugging - python adapter
 
 " Other plugins
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'junegunn/goyo.vim' " Distraction-free writing
 call plug#end()
 
 " Enable yanked highlighting

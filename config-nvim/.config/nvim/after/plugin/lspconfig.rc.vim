@@ -121,4 +121,9 @@ nvim_lsp.lua_ls.setup {
     },
   },
 }
+
+nvim_lsp.rust_analyzer.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 EOF
