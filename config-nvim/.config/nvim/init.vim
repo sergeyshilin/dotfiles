@@ -10,9 +10,13 @@ set expandtab       " Expand TABs to spaces
 
 set nobackup nowritebackup  " Don't create backup/swap files
 
-" Set python provider
+" Set python provider (for dap)
 let g:python3_host_prog = '~/.pyenv/versions/neovim/bin/python3'
 let g:loaded_python_provider = 0 " disable python2 support
+" Disable unused providers
+let g:loaded_node_provider = 0
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
 
 " Fix vertical scroll by repositioning middle of the screen
 nmap <C-u> <C-u>zz
