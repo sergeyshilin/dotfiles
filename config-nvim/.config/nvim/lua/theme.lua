@@ -5,6 +5,12 @@ cyberdream.setup({
     -- Set light or dark variant
     variant = "light",
 
+    -- Enable transparent background
+    transparent = true,
+
+    -- Color saturation [0-1]
+    saturation = 1,
+
     -- Enable italics comments
     italic_comments = true,
 
@@ -23,5 +29,9 @@ cyberdream.setup({
     -- Disable or enable colorscheme extensions
     extensions = {
         telescope = true,
+        treesitter = true,
+        cmp = true,
+        gitsigns = true,
+        indentblankline = true,
     },
 })

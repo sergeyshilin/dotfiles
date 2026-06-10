@@ -18,6 +18,10 @@ let g:loaded_python_provider = 0 " disable python2 support
 nmap <C-u> <C-u>zz
 nmap <C-d> <C-d>zz
 
+" Important for true colors!!
+if exists('+termguicolors')
+  set termguicolors
+endif
 
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -45,7 +49,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder and grep
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'norcalli/nvim-colorizer.lua' " css color highlighter
+Plug 'catgoose/nvim-colorizer.lua' " css color highlighter
 
 " LSP
 Plug 'neovim/nvim-lspconfig' " Collection of configurations for built-in LSP client
@@ -73,14 +77,8 @@ Plug 'junegunn/goyo.vim' " Distraction-free writing
 call plug#end()
 
 " Enable yanked highlighting
+lua require('theme')
 lua require('highlight-yanked')
-
-" Important for true colors!!
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
 
 colorscheme cyberdream
 
